@@ -58,7 +58,17 @@ function playGame(x){
     console.log('Gracz wpisał: ' + playerInput + ' ' + argPlayerMove);
 
 }
-  
+
+/*let buttonRock = document.getElementById('play-rock');
+buttonRock.addEventListener('click', playGame(1));
+
+let buttonPaper = document.getElementById('play-paper');
+buttonPaper.addEventListener('click', playGame(2));
+
+let buttonScissors = document.getElementById('play-scissors');
+buttonScissors.addEventListener('click', playGame(3));
+*/
+
 let buttonRock = document.getElementById('play-rock');
 buttonRock.addEventListener('click', function(event) {
   playGame(1);
