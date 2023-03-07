@@ -59,31 +59,18 @@ function playGame(x){
 
 }
 
-/*let buttonRock = document.getElementById('play-rock');
-buttonRock.addEventListener('click', playGame(1));
-
-let buttonPaper = document.getElementById('play-paper');
-buttonPaper.addEventListener('click', playGame(2));
-
-let buttonScissors = document.getElementById('play-scissors');
-buttonScissors.addEventListener('click', playGame(3));
-*/
-
 let buttonRock = document.getElementById('play-rock');
-buttonRock.addEventListener('click', function(event) {
+buttonRock.addEventListener('click', function() {
   playGame(1);
-  event.preventDefault();
 });
 
   let buttonPaper = document.getElementById('play-paper');
-  buttonPaper.addEventListener('click', function(event) {
+  buttonPaper.addEventListener('click', function() {
     playGame(2);
-    event.preventDefault();
-  });
+});
 
   let buttonScissors = document.getElementById('play-scissors');
-  buttonScissors.addEventListener('click', function(event) {
+  buttonScissors.addEventListener('click', function() {
     playGame(3);
-    event.preventDefault();
-  });
+});
 
