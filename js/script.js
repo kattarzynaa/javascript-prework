@@ -3,7 +3,16 @@ function playGame(x){
 
     clearMessages();
 
-    let playerInput = x;
+    const playerInput = x, 
+    
+        argPlayerMove = getMoveName(playerInput),
+
+        randomNumber = Math.floor(Math.random() * 3 + 1 ),
+
+        argComputerMove = getMoveName(randomNumber),
+
+        argGameResult = displayResult(argComputerMove, argPlayerMove);
+        
 
     function getMoveName(playerInput){
         if(playerInput == 1){
@@ -16,12 +25,6 @@ function playGame(x){
             return 'nożyce';
         }
     }
-
-    let argPlayerMove = getMoveName(playerInput);
-
-    let randomNumber = Math.floor(Math.random() * 3 + 1 );
-
-    let argComputerMove = getMoveName(randomNumber);
 
     function displayResult(argComputerMove, argPlayerMove){
     
@@ -51,7 +54,7 @@ function playGame(x){
         }
     }
 
-    let argGameResult = displayResult(argComputerMove, argPlayerMove);
+   
 
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + ' ' + argGameResult);
 
