@@ -1,3 +1,4 @@
+{
 function playGame(x){
 
     clearMessages();
@@ -74,3 +75,4 @@ buttonRock.addEventListener('click', function() {
     playGame(3);
 });
 
+}
