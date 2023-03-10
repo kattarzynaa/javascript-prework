@@ -6,11 +6,8 @@ function playGame(x){
     const playerInput = x, 
     
         argPlayerMove = getMoveName(playerInput),
-
         randomNumber = Math.floor(Math.random() * 3 + 1 ),
-
         argComputerMove = getMoveName(randomNumber),
-
         argGameResult = displayResult(argComputerMove, argPlayerMove);
         
 
@@ -54,8 +51,6 @@ function playGame(x){
         }
     }
 
-   
-
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + ' ' + argGameResult);
 
     console.log('Wylosowany numer: ' + randomNumber + ' ' + argComputerMove);
@@ -63,18 +58,20 @@ function playGame(x){
 
 }
 
-let buttonRock = document.getElementById('play-rock');
+const buttonRock = document.getElementById('play-rock'),
+    buttonPaper = document.getElementById('play-paper'),
+    buttonScissors = document.getElementById('play-scissors');
+
+
 buttonRock.addEventListener('click', function() {
   playGame(1);
 });
-
-  let buttonPaper = document.getElementById('play-paper');
-  buttonPaper.addEventListener('click', function() {
+  
+buttonPaper.addEventListener('click', function() {
     playGame(2);
 });
 
-  let buttonScissors = document.getElementById('play-scissors');
-  buttonScissors.addEventListener('click', function() {
+buttonScissors.addEventListener('click', function() {
     playGame(3);
 });
 
