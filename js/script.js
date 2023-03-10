@@ -1,17 +1,12 @@
 {
-function playGame(x){
+const playGame = function(x){
 
     clearMessages();
 
     const playerInput = x, 
-    
-        argPlayerMove = getMoveName(playerInput),
-        randomNumber = Math.floor(Math.random() * 3 + 1 ),
-        argComputerMove = getMoveName(randomNumber),
-        argGameResult = displayResult(argComputerMove, argPlayerMove);
-        
+        randomNumber = Math.floor(Math.random() * 3 + 1 );
 
-    function getMoveName(playerInput){
+    const getMoveName = function(playerInput){
         if(playerInput == 1){
             return 'kamień';
         }
@@ -23,7 +18,11 @@ function playGame(x){
         }
     }
 
-    function displayResult(argComputerMove, argPlayerMove){
+    const  argPlayerMove = getMoveName(playerInput),
+        argComputerMove = getMoveName(randomNumber);
+
+
+    const displayResult = function(argComputerMove, argPlayerMove){
     
         if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
             return 'WYGRAŁEŚ! :)';
@@ -50,6 +49,8 @@ function playGame(x){
             return 'ZAGRAJ JESZCZE RAZ!';
         }
     }
+
+    const argGameResult = displayResult(argComputerMove, argPlayerMove);
 
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove + ' ' + argGameResult);
 
